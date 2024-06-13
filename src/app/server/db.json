@@ -1,0 +1,425 @@
+{
+  "addUser": [
+    {
+      "id": "b85e",
+      "employeeId": "E010",
+      "task": "Receipe Book",
+      "priority": "Medium",
+      "employee": "Srija",
+      "employeeStartDate": "2024-02-13",
+      "employeeEndDate": "2024-02-21",
+      "department": "Frontend",
+      "description": "Create a receipe webpage"
+    },
+    {
+      "employeeId": "E012",
+      "task": "Event planner",
+      "priority": "Low",
+      "employee": "Dinesh",
+      "employeeStartDate": "2024-02-21",
+      "employeeEndDate": "2024-02-29",
+      "department": "IT",
+      "description": "Implement Eventplaner",
+      "file": "C:\\fakepath\\3gif.gif",
+      "id": "2bfc"
+    },
+    {
+      "id": "f3e9",
+      "employeeId": "E013",
+      "task": "Tutorial",
+      "priority": "Medium",
+      "employee": "Ramya",
+      "employeeStartDate": "2024-02-11",
+      "employeeEndDate": "2024-02-22",
+      "department": "Frontend",
+      "description": "Develop HTML tutorial",
+      "file": "C:\\fakepath\\7b7d8aa635e31923326b18d7a2a659c1.gif"
+    },
+    {
+      "id": "a31b",
+      "employeeId": "E010",
+      "task": "demo",
+      "priority": "High",
+      "employee": "Ramya",
+      "employeeStartDate": "2024-02-20",
+      "employeeEndDate": "2024-02-29",
+      "department": "Marketing",
+      "description": "wellform",
+      "file": "C:\\fakepath\\4imge.png"
+    },
+    {
+      "employeeId": "E011",
+      "task": "tutorial",
+      "priority": "High",
+      "employee": "Ramya",
+      "employeeStartDate": "2024-02-22",
+      "employeeEndDate": "2024-02-28",
+      "department": "Angular",
+      "description": "Develop HTML tutorial",
+      "file": "C:\\fakepath\\activeuser.png",
+      "id": "36e4"
+    }
+  ],
+  "Users": [
+    {
+      "usertype": "manager",
+      "name": "Srija",
+      "age": 25,
+      "gender": "female",
+      "role": "developer",
+      "joiningdate": "2024-02-15",
+      "salary": "5-6 LPA",
+      "experience": "1-2_years",
+      "userid": "srija27",
+      "password": "Srija@123",
+      "id": "7f41",
+      "employeeId": "",
+      "task": "",
+      "priority": "",
+      "employeeStartDate": "",
+      "employeeEndDate": "",
+      "department": "",
+      "description": "",
+      "employee": ""
+    },
+    {
+      "usertype": "manager",
+      "name": "sindhiya",
+      "age": 89,
+      "gender": "female",
+      "role": "tester",
+      "joiningdate": "2024-02-14",
+      "salary": "3-5 LPA",
+      "experience": "1-2_years",
+      "userid": "sin234",
+      "password": "Sindhiya@123",
+      "id": "dc64",
+      "employeeId": "",
+      "task": "",
+      "priority": "",
+      "employeeStartDate": "",
+      "employeeEndDate": "",
+      "department": "",
+      "description": "",
+      "employee": ""
+    },
+    {
+      "usertype": "admin",
+      "name": "Monisha",
+      "age": 37,
+      "gender": "male",
+      "role": "product_designing",
+      "joiningdate": "2024-02-14",
+      "salary": "6-8 LPA",
+      "experience": "1-2_years",
+      "userid": "23",
+      "password": "Monisha@123",
+      "id": "238d",
+      "employeeId": "",
+      "task": "",
+      "priority": "",
+      "employeeStartDate": "",
+      "employeeEndDate": "",
+      "department": "",
+      "description": "",
+      "employee": ""
+    },
+    {
+      "usertype": "employee",
+      "name": "Ramya",
+      "age": 23,
+      "gender": "female",
+      "role": "developer",
+      "joiningdate": "2024-02-17",
+      "salary": "5-6 LPA",
+      "experience": "1-2_years",
+      "userid": "ramya34",
+      "password": "Ramya@123",
+      "id": "85d4",
+      "employeeId": "",
+      "task": "",
+      "priority": "",
+      "employeeStartDate": "",
+      "employeeEndDate": "",
+      "department": "",
+      "description": "",
+      "employee": ""
+    },
+    {
+      "usertype": "employee",
+      "name": "Janani",
+      "age": 25,
+      "gender": "female",
+      "role": "developer",
+      "joiningdate": "2024-02-20",
+      "salary": "5-6 LPA",
+      "experience": "2-4_years",
+      "userid": "sri45",
+      "password": "Janani@123",
+      "id": "3816",
+      "employeeId": "",
+      "task": "",
+      "priority": "",
+      "employeeStartDate": "",
+      "employeeEndDate": "",
+      "department": "",
+      "description": "",
+      "employee": ""
+    },
+    {
+      "usertype": "employee",
+      "name": "priya",
+      "age": 24,
+      "gender": "female",
+      "role": "developer",
+      "joiningdate": "2024-02-06",
+      "salary": "3-5 LPA",
+      "experience": "1-2_years",
+      "userid": "sri45",
+      "password": "Priya@123",
+      "id": "ba42",
+      "employeeId": "",
+      "task": "",
+      "priority": "",
+      "employeeStartDate": "",
+      "employeeEndDate": "",
+      "department": "",
+      "description": "",
+      "employee": ""
+    }
+  ],
+  "meetings": [
+    {
+      "id": "9c1c",
+      "title": "Angular Project",
+      "date": "2024-02-13",
+      "time": "17:00",
+      "endtime": "20:00",
+      "description": "Phase-3 Angular Project Review based on angular"
+    },
+    {
+      "id": "77a0",
+      "title": "Discussion Meeting",
+      "date": "2024-02-28",
+      "time": "15:00",
+      "endtime": "17:00",
+      "description": "Discussion on Pongal holidays and progress on project"
+    },
+    {
+      "id": "74e2",
+      "title": "Phase-I project Review",
+      "date": "2024-02-15",
+      "time": "09:00",
+      "endtime": "11:30",
+      "description": "Conducting a project Review in bootstrap"
+    },
+    {
+      "id": "4864",
+      "title": "demo",
+      "date": "2024-02-19",
+      "time": "16:03",
+      "endtime": "16:04",
+      "description": "demo"
+    }
+  ],
+  "submission": [
+    {
+      "id": "e8e8",
+      "title": "Receipe Book",
+      "assignee": "Karthik",
+      "description": "Develope a Receipe Book",
+      "date": "2024-02-13",
+      "file": {}
+    },
+    {
+      "id": "6375",
+      "title": "Tutorial Page",
+      "assignee": "John",
+      "description": "Implement HTML tutorial ",
+      "date": "2024-02-14",
+      "file": {}
+    },
+    {
+      "id": "98f9",
+      "title": "Event Planner",
+      "assignee": "Smith Doe",
+      "description": "Create a Event page",
+      "date": "2024-02-02",
+      "file": {}
+    },
+    {
+      "id": "61ab",
+      "title": "demo",
+      "assignee": "demo",
+      "description": "hello",
+      "date": "2024-02-20",
+      "file": {}
+    }
+  ],
+  "latesub": [
+    {
+      "id": "4a6b",
+      "title": "RECEIPE",
+      "assignee": "SHEEBA",
+      "description": "FEVER",
+      "priority": "HIGH",
+      "date": "2024-02-15"
+    },
+    {
+      "id": "8695",
+      "title": "Event planner",
+      "assignee": "john",
+      "description": "Emergency",
+      "priority": "medium",
+      "date": "2024-02-18"
+    },
+    {
+      "id": "d242",
+      "title": "tutorila",
+      "assignee": "john",
+      "description": "fever",
+      "priority": "medium",
+      "date": "2024-02-19"
+    },
+    {
+      "id": "bcbb",
+      "title": "demo",
+      "assignee": "demo",
+      "description": "demo",
+      "priority": "high",
+      "date": "2024-02-19"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "task_name": "tutorial"
+    },
+    {
+      "id": "0",
+      "task_name": "uidesign"
+    },
+    {
+      "id": "0",
+      "task_name": "html"
+    }
+  ],
+  "charts": [
+    {
+      "year": 2019,
+      "color": "rgba(255,90,122,0.2)",
+      "borderColor": "rgba(255,99,132)",
+      "id": "dabf"
+    },
+    {
+      "year": 2020,
+      "color": "rgba(255,154,64,0.2)",
+      "borderColor": "rgba(255,159,64)",
+      "id": "d696"
+    },
+    {
+      "year": 2021,
+      "color": "rgba(255, 205, 86, 0.2)",
+      "borderColor": "rgb(255, 205, 86)",
+      "id": "30d2"
+    },
+    {
+      "year": 2022,
+      "color": "rgba(75, 192, 192, 0.2)",
+      "borderColor": "rgb(75, 192, 192)",
+      "id": "38f6"
+    },
+    {
+      "year": 2022,
+      "color": "rgba(54, 162, 235, 0.2)",
+      "borderColor": "rgb(54, 162, 235)",
+      "id": "09d9"
+    }
+  ],
+  "posts6": [
+    {
+      "month": "January",
+      "assigned": 30,
+      "inprogress": 5,
+      "completed": 15,
+      "id": "5d67"
+    },
+    {
+      "month": "February",
+      "assigned": 20,
+      "inprogress": 10,
+      "completed": 10,
+      "id": "8d6d"
+    },
+    {
+      "month": "March",
+      "assigned": 20,
+      "inprogress": 1,
+      "completed": 19,
+      "id": "68e5"
+    },
+    {
+      "month": "April",
+      "assigned": 25,
+      "inprogress": 8,
+      "completed": 17,
+      "id": "cb83"
+    },
+    {
+      "month": "May",
+      "assigned": 28,
+      "inprogress": 6,
+      "completed": 22,
+      "id": "d7f1"
+    },
+    {
+      "month": "June",
+      "assigned": 33,
+      "inprogress": 7,
+      "completed": 26,
+      "id": "3ec0"
+    },
+    {
+      "month": "July",
+      "assigned": 35,
+      "inprogress": 4,
+      "completed": 31,
+      "id": "12c0"
+    },
+    {
+      "month": "August",
+      "assigned": 30,
+      "inprogress": 3,
+      "completed": 27,
+      "id": "64b9"
+    },
+    {
+      "month": "September",
+      "assigned": 29,
+      "inprogress": 5,
+      "completed": 24,
+      "id": "f213"
+    },
+    {
+      "month": "October",
+      "assigned": 27,
+      "inprogress": 7,
+      "completed": 20,
+      "id": "f02f"
+    },
+    {
+      "month": "November",
+      "assigned": 22,
+      "inprogress": 8,
+      "completed": 14,
+      "id": "90e8"
+    },
+    {
+      "month": "December",
+      "assigned": 26,
+      "inprogress": 6,
+      "completed": 20,
+      "id": "414e"
+    }
+  ]
+}

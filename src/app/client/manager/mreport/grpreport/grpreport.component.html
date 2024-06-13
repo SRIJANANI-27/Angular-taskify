@@ -1,0 +1,187 @@
+<div class="wrapper">
+    <div class="main p-3">
+        <nav class="navbar navbar-expand-lg bg-white rounded-4" id="nav1">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Group-Report</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </ul>
+                    <div class="img d-flex align-items-center">
+                        <div class="bell">
+                            <img src="../assets/images/bellred.jpg" alt="" width="40px" class="me-4">
+                            <div class="conta">
+                                <img src="../assets/images/chat1.png" alt="Avatar" width="40px">
+                                <p><span style="color: blue; font-size: 15px;">Emmirates</span> added you in a
+                                    project ui/ux design</p>
+                                <p><span
+                                        style="color: green; font-size: 15px; margin-left: 210px; position: relative; bottom: 20px;">2hrs
+                                        ago</span></p>
+                            </div>
+                        </div>
+                        <img src="../assets/images/per5.avif" alt="" width="40px" height="40px"
+                            class="rounded-circle ml-2 me-3">
+                        <div class="ml-2">
+                            <!-- manager.component.html -->
+               
+                            <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span><br>
+                            <span>Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb ms-3">
+                <li class="breadcrumb-item"><a routerLink="../report">Report</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Group-Report</li>
+                <li class="breadcrumb-item"><a routerLink="../indireport">Individual-Report</a></li>
+            </ol>
+        </nav>
+        <br>
+        <div class="container">
+            <div class="table-responsive" style="height: 320px; overflow-y: scroll;">
+                <table class="table table-bordered border table-striped  transparent-table">
+                    <thead>
+                        <tr>
+                            <th colspan="11">team 1</th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Task</th>
+                            <th>Completed</th>
+                            <th>Work Hours</th>
+                            <th>Progress</th>
+                            <th>Performance</th>
+                            <th>Status</th>
+                            <th colspan="3" class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>abinaya</td>
+                            <td>tutorial</td>
+                            <td>5</td>
+                            <td>6hrs</td>
+                            <td><img class="pro" src="../assets/images/progress.png" alt="">40%</td>
+                            <td>89%</td>
+                            <td>
+                                <p class="status delivered">Completed</p>
+                            </td>
+                            <td><img src="../assets/images/edit.png" alt="" width="24px"></td>
+                            <td><img class="eye" src="../assets/images/eye.png" alt="" width="20px" data-bs-toggle="modal" data-bs-target="#exampleModal"></td>
+                            <td><img src="../assets/images/delete (1).png" alt="" width="20px"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>kavya thera</td>
+                            <td>issue tracking</td>
+                            <td>7</td>
+                            <td>9hrs</td>
+                            <td><img class="pro" src="../assets/images/progress.png" alt="">50%</td>
+                            <td>69%</td>
+                            <td>
+                                <p class="status cancelled">pending</p>
+                            </td>
+                            <td><img src="../assets/images/edit.png" alt="" width="24px"></td>
+                            <td><img class="eye" src="../assets/images/eye.png" alt="" width="20px" data-bs-toggle="modal" data-bs-target="#exampleModal"></td>
+                            <td><img src="../assets/images/delete (1).png" alt="" width="20px"></td>
+                        </tr>
+                        <!-- Add more rows if needed -->
+                    </tbody>
+                    <thead>
+                        <tr>
+                          <th colspan="11">team 2</th>
+                        </tr>
+                        <tr>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Task</th>
+                          <th>Completed</th>
+                          <th>Work Hours</th>
+                          <th>Progress</th>
+                          <th>Performance</th>
+                          <th>Status</th>
+                          <th colspan="3">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>priya</td>
+                            <td>tutorial</td>
+                            <td>5</td>
+                            <td>6hrs</td>
+                            <td><img class="pro" src="../assets/images/progress.png" alt="">40%</td>
+                            <td>89%</td>
+                            <td>
+                                <p class="status shipped">on-progress</p>
+                            </td>
+                            <td><img src="../assets/images/edit.png" alt="" width="24px"></td>
+                            <td><img class="eye" src="../assets/images/eye.png" alt="" width="20px" data-bs-toggle="modal" data-bs-target="#exampleModal"></td>
+                            <td><img src="../assets/images/delete (1).png" alt="" width="20px"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>ramya</td>
+                            <td>tutorial</td>
+                            <td>5</td>
+                            <td>6hrs</td>
+                            <td><img class="pro" src="../assets/images/progress.png" alt="">40%</td>
+                            <td>89%</td>
+                            <td>
+                                <p class="status cancelled">pending</p>
+                            </td>
+                            <td><img src="../assets/images/edit.png" alt="" width="24px"></td>
+                            <td><img class="eye" src="../assets/images/eye.png" alt="" width="20px" data-bs-toggle="modal" data-bs-target="#exampleModal"></td>
+                            <td><img src="../assets/images/delete (1).png" alt="" width="20px"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>kavya thera</td>
+                            <td>issue tracking</td>
+                            <td>7</td>
+                            <td>9hrs</td>
+                            <td><img class="pro" src="../assets/images/progress.png" alt="">50%</td>
+                            <td>69%</td>
+                            <td>
+                                <p class="status delivered">Completed</p>
+                            </td>
+                            <td><img src="../assets/images/edit.png" alt="" width="24px"></td>
+                            <td><img class="eye" src="../assets/images/eye.png" alt="" width="20px" data-bs-toggle="modal" data-bs-target="#exampleModal"></td>
+                            <td><img src="../assets/images/delete (1).png" alt="" width="20px"></td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </div>
+       
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Performace Report</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <img src="../../../../assets/images/SHOW.png" alt="">
+        </div>
+       
+      </div>
+    </div>
+  </div>
+    </div>
+</div>

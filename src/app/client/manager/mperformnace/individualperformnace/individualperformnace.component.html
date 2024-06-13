@@ -1,0 +1,315 @@
+
+
+<div class="wrapper">
+    <div class="main p-3">
+
+        <nav class="navbar navbar-expand-lg bg-white rounded-4 sticky-top" id="nav1">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Individual Performance </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </ul>
+                    <div class="img d-flex align-items-center">
+                        <div class="bell">
+                            <img src="../assets/images/bellred.jpg" alt="" width="40px" class="me-4">
+                            <div class="conta">
+                                <img src="../assets/images/chat1.png" alt="Avatar" width="40px">
+                                <p><span style="color: blue; font-size: 15px;">Emmirates</span> added you in a
+                                    project ui/ux design</p>
+                                <p><span
+                                        style="color: green; font-size: 15px; margin-left: 210px; position: relative; bottom: 20px;">2hrs
+                                        ago</span></p>
+                            </div>
+                        </div>
+                        <img src="../assets/images/per5.avif" alt="" width="40px" height="40px"
+                            class="rounded-circle ml-2 me-3">
+                        <div class="ml-2">
+                            <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span><br>
+                            <span>Manager</span>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <br><br>
+        <div class="containmain" style="height: 350px; overflow: auto;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="list-group ms-4">
+                        <a class="list-group-item list-group-item-action">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center ">
+                                    <img src="../assets/images/chat1.png" alt="" width="80px"
+                                        class="rounded-circle mr-3">
+                                    <div class="ms-2">
+                                        <h6>Janani</h6>
+                                        <h6>&#64;srija</h6>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary"  (click)="toggleCollapseExample()" aria-expanded="false" aria-controls="collapseExample">
+                                    view
+                                </button>
+                            </div>
+                        </a>
+                        <a class="list-group-item list-group-item-action list-group-item-secondary">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <img src="../assets/images/chat4.png" alt="" width="80px"
+                                        class="rounded-circle mr-3">
+                                    <div class="ms-2">
+                                        <h6>Ramraj</h6>
+                                        <h6>&#64;raj</h6>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" (click)="toggleCollapseAnother()" aria-expanded="false" aria-controls="collapseAnother">
+                                    view
+                                </button>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-success">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <img src="../assets/images/chat1.png" alt="" width="80px"
+                                        class="rounded-circle mr-3">
+                                    <div class="ms-2">
+                                        <h6>Janani</h6>
+                                        <h6>&#64;srija</h6>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary">view</button>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-danger">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <img src="../assets/images/chat2.png" alt="" width="80px"
+                                        class="rounded-circle mr-3">
+                                    <div class="ms-2">
+                                        <h6>Priyadharshini</h6>
+                                        <h6>&#64;priya</h6>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary">view</button>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-warning">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <img src="../assets/images/chat3.png" alt="" width="80px"
+                                        class="rounded-circle mr-3">
+                                    <div class="ms-2">
+                                        <h6>Janani</h6>
+                                        <h6>&#64;srija</h6>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary">view</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="collapse ms-3 show" id="collapseExample"  [class.show]="collapseExampleVisible">
+                        <div class="card card-body">
+                           
+                                <div class="container">
+                                    <div class="row 
+                                    justify-content-center">
+                                        <div class="col-md-4">
+                                            <div class="card text-center bg-success-subtle
+                                           text-dark 
+                                            rounded ">
+                                                <div class="card-body">
+                                                    <h3 class="card-text counter" data-target="95">
+                                                        20+</h3>
+                                                    <p class="card-title 
+                                                fs-5 text-white">
+                                                        Completed
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card text-center bg-danger-subtle
+                                            text-dark rounded">
+                                                <div class="card-body">
+                                                    <h3 class="card-text counter" data-target="1000000">
+                                                        56+</h3>
+                                                    <p class="card-title fs-5 
+                                                text-white">
+                                                        Pending
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card text-center bg-primary-subtle
+                                            text-dark rounded">
+                                                <div class="card-body">
+                                                    <h3 class="card-text counter" data-target="1000000">
+                                                        156+</h3>
+                                                    <p class="card-title fs-5 
+                                                text-white">
+                                                        Total Tasks
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><br>
+                                <table class="table table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Title</th>
+                                        <th>Progress</th>
+                                        <th>Members</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor="let project of projectss">
+                                        <td>{{ project.id }}</td>
+                                        <td>{{ project.title }}</td>
+                                        <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" [style.width.%]="project.progress" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
+                                          </div>
+                                        </td>
+                                        <td>{{ project.members.join(', ') }}</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                        </div>
+                    </div>
+               
+               
+                    <div class="collapse ms-3" [class.show]="collapseAnotherVisible" id="collapseAnother">
+                        <div class="card card-body">
+                           
+                            <div class="container">
+                                <div class="row 
+                                justify-content-center">
+                                    <div class="col-md-4">
+                                        <div class="card text-center bg-success-subtle
+                                         text-dark 
+                                        rounded ">
+                                            <div class="card-body">
+                                                <h3 class="card-text counter" data-target="95">
+                                                    40+</h3>
+                                                <p class="card-title 
+                                            fs-5 text-white">
+                                                    Completed
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card text-center bg-danger-subtle 
+                                        text-dark rounded">
+                                            <div class="card-body">
+                                                <h3 class="card-text counter" data-target="1000000">
+                                                    16+</h3>
+                                                <p class="card-title fs-5 
+                                            text-white">
+                                                    Pending
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card text-center bg-primary-subtle 
+                                        text-dark rounded">
+                                            <div class="card-body">
+                                                <h3 class="card-text counter" data-target="1000000">
+                                                    109+</h3>
+                                                <p class="card-title fs-5 
+                                            text-white">
+                                                    Total Tasks
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>ID</th>
+                                    <th>Title</th>
+                                    <th>Progress</th>
+                                    <th>Members</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let project of projects">
+                                    <td>{{ project.id }}</td>
+                                    <td>{{ project.title }}</td>
+                                    <td>
+                                      <div class="progress">
+                                        <div class="progress-bar" role="progressbar" [style.width.%]="project.progress" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
+                                      </div>
+                                    </td>
+                                    <td>{{ project.members.join(', ') }}</td>
+                                  </tr>
+                                </tbody>
+                              </table><br>
+                              <div class="accordion" id="accordionExample">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        Progress
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <img src="../assets/images/piechart.png" alt="hii"
+                                                        width="200px">
+                                                </div>
+                                                <div class="col-md-6 mt-5">
+                                                    <div class="progress" role="progressbar"
+                                                        aria-label="Animated striped example" aria-valuenow="45"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                            style="width: 45%">45%</div>
+                                                    </div><br><br>
+                                                    <div class="progress" role="progressbar"
+                                                        aria-label="Animated striped example" aria-valuenow="45"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                                                            style="width: 55%">65%</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                        <img src="../assets/images/replicate-prediction-kml4wi3bwnj76cjqwgsief45xi.png"
+                                            alt="" class="img-fluid">
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                      </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<div class="wrapper">
+    <div class="main p-3">
+        <nav class="navbar navbar-expand-lg bg-white rounded-4 sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">To-do-task</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex me-5" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="bell">
+                                <img src="../assets/images/bellred.jpg" alt="" width="40px" class="me-4">
+                                <div class="conta">
+                                    <img src="../assets/images/chat1.png" alt="Avatar" width="40px">
+                                    <p><span style="color: blue; font-size: 15px;">Emmirates</span> added you in a
+                                        project ui/ux design</p>
+                                    <p><span
+                                            style="color: green; font-size: 15px; margin-left: 210px; position: relative; bottom: 20px;">2hrs
+                                            ago</span></p>
+
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item top">
+                            <img src="../assets/images/per6.avif" alt="" width="40px" height="40px"
+                                class="rounded-circle me-2">
+                            <div class="end">
+                              <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span>
+                                <h6>User</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav><br>
+       <!-- Display user card for the logged-in user -->
+<div class="card ms-5" style="width: 1000px;">
+    <div class="card-body" *ngFor="let card of users">
+        <!-- Check if the current user's name matches the logged-in username -->
+        <div *ngIf="card.name === loggedInUsername">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="profile-section bg-white rounded-2">
+                                <!-- Profile image -->
+                                <img src="../../../assets/images/chat1.png" class="profile-image" width="90px" style="margin-left: 70px;"><br><br>
+                                <!-- User name -->
+                                <!-- <h4 class="text-center">{{ card.name }}</h4> -->
+                                <!-- Additional details -->
+                                <div class="profile-details">
+                                    <p><strong>Name:</strong> {{ card.name }}</p>
+                                    <p><strong>Age:</strong> {{ card.age}}</p>
+                                    <p><strong>Role:</strong> {{ card.role }}</p>
+                                    <p><strong>Experience:</strong> {{ card.experience }}</p>
+                                    <p><strong>Date of Joining:</strong> {{ card.joiningdate }}</p>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-progress">
+                        <h5>Skills Progress</h5>
+                        <h6>Web development</h6>
+                        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">75%</div>
+                          </div>
+                          <h6 class="mt-3">Backend</h6>
+                          <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 88%">88%</div>
+                          </div>
+        
+                        <h6 class="mt-3">Javascript</h6>
+                          <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 68%">68%</div>
+                          </div>
+                          <h6 class="mt-3">Php</h6>
+                          <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 98%">98%</div>
+                          </div>
+                        
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="table-responsive ms-2">
+  <table class="table table-bordered border-5 table-hover bg-white" id="table-3">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Progress</th>
+        <th>Collaborate</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+
+      <tr *ngFor="let row of tableData; let i = index" [ngClass]="{'bg-light': row.collaborated}">
+        <td>{{ i+1 }}</td>
+        <td>
+          <img [src]="row.image" alt="" width="35px" height="35px" class="rounded-circle"><br>{{ row.name }}
+        </td>
+        <td class="text-center">{{ row.progress }}%</td>
+        <td>
+          <button *ngIf="!row.collaborated" class="btn btn-sm btn-primary mt-3" (click)="collaborateClicked(row)">
+             Collaborate
+          </button>
+          <span *ngIf="row.collaborated" class="collaborated-text">Collaborated</span>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>

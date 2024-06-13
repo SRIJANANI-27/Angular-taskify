@@ -1,0 +1,66 @@
+<div class="wrapper">
+    <div class="main p-3">
+        <nav class="navbar navbar-expand-lg bg-white rounded-4 sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">View Submission</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex me-5" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="bell">
+                                <img src="../assets/images/bellred.jpg" alt="" width="40px" class="me-4">
+                                <div class="conta">
+                                    <img src="../assets/images/chat1.png" alt="Avatar" width="40px">
+                                    <p><span style="color: blue; font-size: 15px;">Emmirates</span> added you in a
+                                        project ui/ux design</p>
+                                    <p><span
+                                            style="color: green; font-size: 15px; margin-left: 210px; position: relative; bottom: 20px;">2hrs
+                                            ago</span></p>
+
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item top">
+                            <img src="../assets/images/per6.avif" alt="" width="40px" height="40px"
+                                class="rounded-circle me-2">
+                            <div class="end">
+                                <span class="username">Ramya</span>
+                                <h6>User</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav><br>
+
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <ol class="breadcrumb ms-2">
+              <li class="breadcrumb-item"><a routerLink="../submission">Submission</a></li>
+              <li class="breadcrumb-item active" aria-current="page">View-submission</li>
+            </ol>
+        </nav>
+
+
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-6 mt-2">
+                <app-viewsubmission></app-viewsubmission>
+            </div>
+            <div class="col-md-6 mt-5">
+                <app-scards></app-scards>
+            </div>
+            </div>
+        </div>
+</div>
+</div>

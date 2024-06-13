@@ -1,0 +1,66 @@
+<!--<a routerLink="dashboard">Dashboard</a>-->
+
+<aside id="sidebar" class="fixed" [class.expand]="isSidebarOpen">
+    <div class="d-flex">
+      <button class="toggle-btn" type="button"  (click)="toggleSidebar()">
+        <i class="lni lni-grid-alt" style="margin-left: 7px; margin-top: 8px;"></i>
+      </button>
+      <div class="sidebar-logo">
+        <a routerLink="">Taskify</a>
+      </div>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="assignedtasks" class="sidebar-link" [ngbTooltip]="'Assigned tasks'"  placement="right"><i class="lni lni-list"></i><span>Assigned-tasks</span>
+        </a>
+      </li>
+  
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="createtasks" class="sidebar-link" [ngbTooltip]="'Create task'"  placement="right"><i class="lni lni-add-files"></i><span>Create-tasks</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="stikies" class="sidebar-link" [ngbTooltip]="'stikies'"  placement="right"><i class="lni lni-layout" ></i><span>Artful stikies</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="submission" class="sidebar-link" [ngbTooltip]="'Submision'"  placement="right"><i class="lni lni-popup"></i><span>Submission</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="../team" class="sidebar-link" [ngbTooltip]="'team'"  placement="right"><img src="../../assets/images/teams.png" width="90px" style="position: relative;right: 40px;"><span>Teams</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <div class="dropdown pb-4 mt-3">
+          <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../../../assets/images/images.jpeg" alt="" width="30px" height="30px" class="rounded-circle " style="margin-left: 15px;">
+          </a>
+          <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownUser1">
+            <img src="../assets/images/j.png" alt="">
+            <h6 style="position: relative; bottom:28px; left: 39px;">    <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span></h6>
+            <p>srija.janani2003gmail...</p>
+            <p style="position: relative; bottom: 35px;">User ID: 60024608243</p>
+            <hr style="position: relative; bottom: 50px;">
+            <div class="container">
+              <button class="btn btn-sm btn-xs-size bg-white user" style="position: relative; bottom: 59px;">
+                <a routerLink="profile" class="text-decoration-none text-dark">My Account</a> 
+                <i class="lni lni-user"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+    </li>
+    </ul>
+    <div class="sidebar-footer mb-5">
+      <a routerLink="" class="sidebar-link">
+        <i class="lni lni-exit"></i>
+        <span>Logout</span>
+      </a>
+    </div> 
+  
+ 
+  </aside>
+  
+

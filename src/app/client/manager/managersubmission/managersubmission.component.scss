@@ -1,0 +1,77 @@
+.cards:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+.card {
+  background-color: white; /* Change background color as needed */
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-card-header .nav-link {
+  background-color: #fff; /* Change background color as needed */
+  border: none;
+  border-radius: 15px;
+  color: #212529; /* Change text color as needed */
+}
+
+.tab-card-header .nav-link.active {
+  background-color: #007bff; /* Change active tab background color as needed */
+  color: #fff; /* Change active tab text color as needed */
+}
+
+.tab-card-header .nav-link:hover {
+  background-color: #0056b3; /* Change hover tab background color as needed */
+  color: #fff; /* Change hover tab text color as needed */
+}
+.scrollable-container::-webkit-scrollbar{
+  display:none;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Table header */
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Table header */
+.table th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Table body */
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+

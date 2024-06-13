@@ -1,0 +1,124 @@
+<div class="wrapper">
+    <div class="main p-3">
+ 
+        <nav class="navbar navbar-expand-lg bg-white rounded-4" id="nav1">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Dashboard</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <form class="d-flex ml-5" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <div class="bell">
+                      <img src="../assets/images/bellred.jpg" alt="" width="40px" class="me-4">
+                      <div class="conta">
+                        <img src="../assets/images/chat1.png" alt="Avatar" width="40px">
+                        <p><span style="color: blue; font-size: 15px;">Emmirates</span> added you in a project ui/ux design
+                        </p>
+                        <p><span
+                            style="color: green; font-size: 15px; margin-left: 210px; position: relative; bottom: 20px;">2hrs
+                            ago</span></p>
+        
+                      </div>
+                    </div>
+        
+                  </li>
+                  <li class="nav-item top">
+                    <img src="../assets/images/per5.avif" alt="" width="40px" height="40px" class="rounded-circle me-3">
+                    <div class="end">
+                      <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span>
+                      <h6>Admin</h6>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+</nav> <br>
+ 
+<div class="container-fluid" style="height: 380px; overflow-y: scroll;">
+  <div class="row">
+
+    <div class="col-md-6">
+      
+      <div class="row justify-content-around mt-4">
+        <div class="col-md-4 col-lg-3 mb-4" *ngFor="let userType of getUserTypes()">
+          <div class="card custom-card" style="width: 150px;height: 150px;">
+            <div class="card-header custom-header">
+              <h4 class="card-title user-type-header" style="text-transform: capitalize;">{{ userType }}
+              </h4>
+            </div>
+            <div class="card-body custom-body ">
+              <p class="card-text text-center mt-3">{{ userTypesCount[userType] }}</p>
+            </div>
+          </div>
+          
+            
+            
+          </div>
+        </div>
+
+        <app-dychart></app-dychart> 
+      </div>
+      
+      
+      
+      
+    
+
+     
+    
+    
+    <div class="col-md-6">
+
+    
+       <div class="boxes d-flex justify-content-center flex-wrap">
+        <div class="single col-lg-3 col-md-6 col-sm-6 col-12">
+          <img src="../assets/images/3d-setting.png" alt="">
+          <p>settings</p>
+        </div>
+        <div class="single col-lg-3 col-md-6 col-sm-6 col-12">
+          <img src="../assets/images/customization.png" alt="">
+          <p>customize</p>
+        </div>
+        <div class="single col-lg-3 col-md-6 col-sm-6 col-12">
+          <img src="../assets/images/security.png" alt="">
+          <p>security</p>
+        </div>
+        <div class="single col-lg-3 col-md-6 col-sm-6 col-12">
+          <img src="../assets/images/update.png" alt="">
+          <p>update</p>
+        </div>
+        <div class="single col-lg-3 col-md-6 col-sm-6 col-12">
+          <img src="../assets/images/backup.png" alt="">
+          <p>backup</p>
+        </div>
+        <div class="single col-lg-3 col-md-6 col-sm-6 col-12">
+          <img src="../assets/images/notification.png" alt="">
+          <p>notification</p>
+        </div>
+        <div class="single col-lg-3 col-md-6 col-sm-6 col-12">
+          <img src="../assets/images/usermana.png" alt="">
+          <p>manage</p>
+        </div>
+        <div class="single col-lg-3 col-md-6 col-sm-6 col-12">
+          <img src="../assets/images/feedback.png" alt="">
+          <p>feedback</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+

@@ -1,0 +1,174 @@
+.sticky {
+    width: auto;
+    min-height: 67vh;
+    background-color: white;
+    /* margin-left: 8px; */
+    border-radius: 30px;
+  
+  }
+  
+  .noteHolder {
+  
+    display: inline-block;
+    width: 12em;
+    height: 12em;
+    font-family: 'Handlee', cursive;
+    margin: 15px;
+    /* margin-left: 50px; */
+    margin-top: 30px;
+    cursor: all-scroll;
+    z-index: 600;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 2px #00000010;
+  }
+  
+  .note {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background: #bc38f57a;
+    overflow: hidden;
+    padding: 0;
+    font-size: 10px;
+  }
+  
+  .note:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 16px 16px 0;
+    border-style: solid;
+    border-color: #fff0 #fff0 #ffffffe6 #ffffffe6;
+    background: #ffffff;
+    box-shadow: 0px 0px 15px 4px #0c0f4180;
+    display: block;
+    width: 0;
+  }
+  
+  .note.rounded {
+    border-radius: 5px 36px 5px 5px;
+  }
+  
+  .note.rounded:before {
+    border-width: 12px;
+    border-color: #fff #fff transparent transparent;
+    border-radius: 0 0 0 5px;
+    transition: border .4s ease-in;
+  }
+  
+  .note textarea {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-family: 'Handlee', cursive;
+    margin: 0px;
+    padding: 10px;
+    color: black;
+    font-size: 13px;
+  }
+  
+  .note textarea:focus {
+    outline: none;
+  }
+  
+  .btn {
+    box-shadow: none;
+    cursor: pointer;
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  
+  .btn-add:hover {
+    background-color: #6039e0;
+  }
+  
+  .btn-edit {
+    background-color: #fff;
+    border: none;
+    color: #1c7fff;
+    padding: 0px;
+    margin: 5px 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 5px #0c0f411a;
+    position: relative;
+    top: -10px;
+  }
+  
+  .btn-del {
+    background-color: #fff;
+    border: none;
+    color: #fd1f1f;
+    padding: 0px;
+    margin: 5px 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 5px #0c0f411a;
+    position: relative;
+    top: -10px;
+  }
+  
+  .action {
+    position: relative;
+    bottom: 40px;
+    left: 110px;
+    padding: 0 5px;
+    transition: all .4s;
+  }
+  
+  .btn-add {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #6039e0;
+    color: #fff;
+    left: 1110px;
+    top: 420px;
+    position: relative;
+    box-shadow: 0px 0px 0px 4px #6039e066;
+    animation: pulse 2s infinite;
+    position: fixed;
+  }
+  
+  @keyframes pulse {
+    0% {
+  
+      box-shadow: 0 0 0 0 rgba(96, 57, 224, 0.4);
+    }
+  
+    70% {
+  
+      box-shadow: 0 0 0 10px rgba(96, 57, 224, 0);
+    }
+  
+    100% {
+  
+      box-shadow: 0 0 0 0 rgba(96, 57, 224, 0);
+    }
+  }
+  
+  #note2 {
+    background-color: #f1e000;
+  }
+  
+  #note1 {
+    background-color: #38f5c05a;
+  
+  }
+  
+  #mydiv {
+    display: none;
+  
+  }
+  .area{
+    border-left: 5px solid blue;
+  }

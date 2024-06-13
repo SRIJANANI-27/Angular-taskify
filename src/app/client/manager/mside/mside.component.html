@@ -1,0 +1,70 @@
+
+
+<aside id="sidebar" class="fixed" [class.expand]="isSidebarOpen">
+    <div class="d-flex">
+      <button class="toggle-btn" type="button"  (click)="toggleSidebar()">
+        <i class="lni lni-grid-alt" style="margin-left: 7px; margin-top: 8px;"></i>
+      </button>
+      <div class="sidebar-logo">
+        <a routerLink="">Taskify</a>
+      </div>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="dashboard" class="sidebar-link" [ngbTooltip]="'Dashboard'"  placement="right"><i class="lni lni-dashboard"></i><span>Dashboard</span>
+        </a>
+      </li>
+  
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="assigntasks" class="sidebar-link" [ngbTooltip]="'AssignTasks'"  placement="right"><i class="lni lni-agenda"></i><span>Assign tasks</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="report" class="sidebar-link" [ngbTooltip]="'Report'"  placement="right"><i class="lni lni-layout" ></i><span>Report</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="performance" class="sidebar-link" [ngbTooltip]="'performance'"  placement="right"><i class="lni lni-protection"></i><span>Security</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="meeting" class="sidebar-link" [ngbTooltip]="'Schedule'"  placement="right"><i class="lni lni-display-alt"></i><span>Schedule Meeting</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="viewsubmission" class="sidebar-link" [ngbTooltip]="'viewsubmission'"  placement="right"><i class="lni lni-folder"></i><span>view-submission</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <div class="dropdown pb-4 mt-3">
+          <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../../../assets/images/images.jpeg" alt="" width="30px" height="30px" class="rounded-circle " style="margin-left: 15px;">
+          </a>
+          <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownUser1">
+            <img src="../assets/images/j.png" alt="">
+            <h6 style="position: relative; bottom:28px; left: 39px;">Srijanani</h6>
+            <p>srija.janani2003gmail...</p>
+            <p style="position: relative; bottom: 35px;">User ID: 60024608243</p>
+            <hr style="position: relative; bottom: 50px;">
+            <div class="container">
+              <button class="btn btn-sm btn-xs-size bg-white user" style="position: relative; bottom: 59px;">
+                <a routerLink="profile" class="text-decoration-none text-dark">My Account</a> 
+                <i class="lni lni-user"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+    </li>
+    
+    <div class="sidebar-footer">
+      <a routerLink="" class="sidebar-link">
+        <i class="lni lni-exit"></i>
+        <span>Logout</span>
+      </a>
+    </div> 
+  
+    </ul>
+  </aside>
+  
+  

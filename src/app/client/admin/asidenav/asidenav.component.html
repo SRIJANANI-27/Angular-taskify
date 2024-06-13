@@ -1,0 +1,93 @@
+<!--<a routerLink="dashboard">Dashboard</a>-->
+
+<aside id="sidebar" class="fixed" [class.expand]="isSidebarOpen">
+    <div class="d-flex">
+      <button class="toggle-btn" type="button"  (click)="toggleSidebar()">
+        <i class="lni lni-grid-alt" style="margin-left: 7px; margin-top: 8px;"></i>
+      </button>
+      <div class="sidebar-logo">
+        <a routerLink="">Taskify</a>
+      </div>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="adashboard" class="sidebar-link" [ngbTooltip]="'Dashboard'"  placement="right"><i class="lni lni-dashboard"></i><span>Dashboard</span>
+        </a>
+      </li>
+  
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="ausers" class="sidebar-link" [ngbTooltip]="'Users'"  placement="right"><i class="lni lni-user"></i><span>Users</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="asettings" class="sidebar-link" [ngbTooltip]="'Settings'"  placement="right"><i class="lni lni-cog" ></i><span>Settings</span>
+        </a>
+      </li>
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="asecurity" class="sidebar-link" [ngbTooltip]="'Security'"  placement="right"><i class="lni lni-protection"></i><span>Security</span>
+        </a>
+      </li>
+      <!-- <li class="sidebar-item">
+        <a class="sidebar-link">
+            <span>
+                <div class="dropdown pb-4">
+                    <a 
+                        class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../../../assets/images/per2.avif" alt="" width="30px" height="30px"
+                            class="rounded-circle" >
+                    </a>
+    
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownUser1">
+                        <img src="../assets/images/j.png" alt="">
+                        <h6 style="position: relative; bottom:28px; left: 39px;">Srijanani</h6>
+                        <p>srija.janani2003gmail...</p>
+                        <p style="position: relative; bottom: 35px;">User ID: 60024608243</p>
+    
+                        <hr style="position: relative; bottom: 50px;">
+                        <div class="container">
+                            <button class="btn btn-sm btn-xs-size bg-white user"
+                                style="position: relative; bottom: 59px;"><a href="../account.html"
+                                    class="text-decoration-none text-dark">My Account</a> <i
+                                    class="lni lni-user"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </a>
+    </li> -->
+    <li class="sidebar-item">
+      <div class="dropdown pb-4 mt-5">
+        <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="../../../assets/images/per6.avif" alt="" width="30px" height="30px" class="rounded-circle " style="margin-left: 15px;">
+        </a>
+        <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownUser1">
+          <img src="../assets/images/j.png" alt="">
+          <h6 style="position: relative; bottom:28px; left: 39px;"> <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span></h6>
+          <p>srija.janani2003gmail...</p>
+          <p style="position: relative; bottom: 35px;">User ID: 60024608243</p>
+          <hr style="position: relative; bottom: 50px;">
+          <div class="container">
+            <button class="btn btn-sm btn-xs-size bg-white user" style="position: relative; bottom: 59px;">
+              <a routerLink="profile" class="text-decoration-none text-dark">My Account</a> 
+              <i class="lni lni-user"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+  </li>
+  </ul>
+     
+  
+    <div class="sidebar-footer mb-4">
+      <a routerLink="" class="sidebar-link">
+        <i class="lni lni-exit"></i>
+        <span>Logout</span>
+      </a>
+    </div> 
+  
+    
+  </aside>
+  
+

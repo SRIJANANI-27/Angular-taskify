@@ -1,0 +1,35 @@
+.button_slide{
+    color: #875fdc;
+    border: 2px solid #875fdc;
+    border-radius: 0px;
+    display: inline-block;
+    font-family:roboto;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #875fdcb2;
+    transition: ease-out 0.5s;
+    font-weight: 600;
+    text-decoration: none;
+   
+  }
+  
+  .slide_right:hover {
+    box-shadow: inset 400px 0 0 0 #875fdcb2;
+    
+  } 
+
+  .button_slide a:hover,.button_slide i:hover{
+    color: white;
+}
+#special-table th,td{
+  padding: 5px;
+  border: none;
+}
+.maintable th,td{
+    padding: 10px;
+    align-items: center;
+}
+.modal-header{
+  background: linear-gradient(#f4dbfb, #d8dbfead);
+}

@@ -1,0 +1,229 @@
+<div class="wrapper">
+    <div class="main p-3">
+        <nav class="navbar navbar-expand-lg bg-white rounded-4 sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Pending task</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex me-5" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="bell">
+                                <img src="../assets/images/bellred.jpg" alt="" width="40px" class="me-4">
+                                <div class="conta">
+                                    <img src="../assets/images/chat1.png" alt="Avatar" width="40px">
+                                    <p><span style="color: blue; font-size: 15px;">Emmirates</span> added you in a
+                                        project ui/ux design</p>
+                                    <p><span
+                                            style="color: green; font-size: 15px; margin-left: 210px; position: relative; bottom: 20px;">2hrs
+                                            ago</span></p>
+
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item top">
+                            <img src="../assets/images/per6.avif" alt="" width="40px" height="40px"
+                                class="rounded-circle me-2">
+                            <div class="end">
+                                <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span>
+                                <h6>User</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav><br>
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <ol class="breadcrumb ms-2">
+              <li class="breadcrumb-item"><a routerLink="../viewcards">View-Submission</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Previous-Tasks</li>
+            </ol>
+        </nav><br>
+        <div class="table-responsive " style="height: 350px;">
+            <table class="table table-bordered table-responsive this-week">
+                <thead>
+                    <tr>
+                        <th scope="col" style="color: blueviolet; font-size: 20PX;">THIS WEEK</th>
+                        <th>User</th>
+                        <th>timeline</th>
+                        <th>priority</th>
+
+                        <th>status</th>
+                        <th>time tracking</th>
+                    </tr>
+                </thead>
+                <br>
+                <tbody>
+                    <tr>
+                        <th>Finalize UI</th>
+                        <td><img src="../../../assets/images/chat1.png" alt="" width="30px"></td>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-info" style="width: 20%"></div>
+                            </div>
+                        </td>
+                        <td><span class="badge text-bg-danger">High</span></td>
+                        <td class="table-success">Done</td>
+                        <td><img src="../../../assets/images/clock.jpg" alt="" width="15px" class="me-2">5hrs 4mins</td>
+                    </tr>
+
+
+                    <tr>
+                        <th>Refine objectives</th>
+                        <td><img src="../../../assets/images/chat3.png" alt="" width="30px">
+                            <img src="../../../assets/images/chat4.png" alt="" width="30px"
+                                style="position: relative; right: 8px;">
+                        </td>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-info" style="width: 50%"></div>
+                            </div>
+                        </td>
+                        <td><span class="badge text-bg-warning  text-white">medium</span></td>
+                        <td class="table-warning">Working</td>
+                        <td><img src="../../../assets/images/clock.jpg" alt="" width="15px" class="me-2">10hrs 9mins
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th>Identify usecase</th>
+                        <td><img src="../../../assets/images/chat2.png" alt="" width="30px"></td>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-info" style="width: 10%"></div>
+                            </div>
+                        </td>
+                        <td><span class="badge text-bg-success  text-white">Low</span></td>
+                        <td class="table-danger">Pending</td>
+                        <td><img src="../../../assets/images/clock.jpg" alt="" width="15px" class="me-2">1hrs 9mins</td>
+
+                    </tr>
+                    <tr>
+                        <th>Test plan</th>
+                        <td><img src="../../../assets/images/chat6.jpeg" alt="" width="35px"></td>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-info" style="width: 45%"></div>
+                            </div>
+                        </td>
+                        <td><span class="badge text-bg-danger  text-white">High</span></td>
+                        <td class="table-success">Done</td>
+                        <td><img src="../../../assets/images/clock.jpg" alt="" width="15px" class="me-2">7hrs 20mins
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <table class="table table-responsive pre table-bordered ">
+                <thead >
+                    <tr>
+                        <th scope="col" style="color: blue; font-size: 20PX;">PREVIOUS</th>
+                        <th>User</th>
+                        <th>timeline</th>
+                        <th>priority</th>
+
+                        <th>status</th>
+                        <th>time tracking</th>
+                    </tr>
+                </thead>
+                <br>
+                <tbody>
+                    <tr>
+                        <th>Finalize UI</th>
+                        <td><img src="../../../assets/images/chat1.png" alt="" width="30px"></td>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-info" style="width: 20%"></div>
+                            </div>
+                        </td>
+                        <td><span class="badge text-bg-danger">High</span></td>
+                        <td class="table-success">Done</td>
+                        <td><img src="../../../assets/images/clock.jpg" alt="" width="15px" class="me-2">5hrs 4mins</td>
+                    </tr>
+
+
+                    <tr>
+                        <th>Refine objectives</th>
+                        <td><img src="../../../assets/images/chat3.png" alt="" width="30px">
+                            <img src="../../../assets/images/chat4.png" alt="" width="30px"
+                                style="position: relative; right: 8px;">
+                        </td>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-info" style="width: 50%"></div>
+                            </div>
+                        </td>
+                        <td><span class="badge text-bg-warning  text-white">medium</span></td>
+                        <td class="table-warning">Working</td>
+                        <td><img src="../../../assets/images/clock.jpg" alt="" width="15px" class="me-2">10hrs 9mins
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th>Identify usecase</th>
+                        <td><img src="../../../assets/images/chat2.png" alt="" width="30px"></td>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-info" style="width: 10%"></div>
+                            </div>
+                        </td>
+                        <td><span class="badge text-bg-success  text-white">Low</span></td>
+                        <td class="table-danger">Pending</td>
+                        <td><img src="../../../assets/images/clock.jpg" alt="" width="15px" class="me-2">1hrs 9mins</td>
+
+                    </tr>
+                    <tr>
+                        <th>Test plan</th>
+                        <td><img src="../../../assets/images/chat6.jpeg" alt="" width="35px"></td>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-info" style="width: 45%"></div>
+                            </div>
+                        </td>
+                        <td><span class="badge text-bg-danger  text-white">High</span></td>
+                        <td class="table-success">Done</td>
+                        <td><img src="../../../assets/images/clock.jpg" alt="" width="15px" class="me-2">7hrs 20mins
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br><br>
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-md-4 bg-warning-subtle">
+                    <h4>Previous</h4>
+                    <app-previous></app-previous>
+                </div>
+                <div class="col-md-4 bg-info-subtle">
+                    <h4>Recent</h4>
+                </div>
+                <div class="col-md-4 bg-danger-subtle">
+                    <h4>Today</h4>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>

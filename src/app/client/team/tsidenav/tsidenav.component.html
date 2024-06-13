@@ -1,0 +1,53 @@
+<!--<a routerLink="dashboard">Dashboard</a>-->
+
+<aside id="sidebar" class="fixed" [class.expand]="isSidebarOpen">
+    <div class="d-flex">
+      <button class="toggle-btn" type="button"  (click)="toggleSidebar()">
+        <i class="lni lni-grid-alt" style="margin-left: 7px; margin-top: 8px;"></i>
+      </button>
+      <div class="sidebar-logo">
+        <a routerLink="">Taskify</a>
+      </div>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item" routerLinkActive="active-nav-item">
+        <a routerLink="collaboration" class="sidebar-link" [ngbTooltip]="'collaboration'"  placement="right"><i class="lni lni-slideshare"  ></i><span>collaboration</span>
+        </a>
+      </li>
+  
+      <li class="sidebar-item"  routerLinkActive="active-nav-item">
+        <a routerLink="discussion-room" class="sidebar-link" [ngbTooltip]="'discussion-room'"  placement="right"><i class='bx bx-message-rounded-dots' style='color:#ffffff'></i><span>discussion-room</span>
+        </a>
+      </li>
+      <li class="sidebar-item"  routerLinkActive="active-nav-item">
+        <a routerLink="teammembers" class="sidebar-link" [ngbTooltip]="'teammembers'"  placement="right"><i class='bx bx-group' style='color:#ffffff' ></i><span>teammembers</span>
+        </a>
+      </li>
+      <li class="sidebar-item"  routerLinkActive="active-nav-item">
+        <a routerLink="teams" class="sidebar-link" [ngbTooltip]="'teams'"  placement="right"><i class="lni lni-popup"></i><span>Teams</span>
+        </a>
+      </li>
+      <li class="sidebar-item"  routerLinkActive="active-nav-item">
+        <a routerLink="grouptask" class="sidebar-link" [ngbTooltip]="'Group'"  placement="right"><i class="lni lni-layout" ></i><span>Group-Task</span>
+        </a>
+      </li>
+      <li class="sidebar-item"  routerLinkActive="active-nav-item">
+        <a routerLink="meeting" class="sidebar-link" [ngbTooltip]="'meeting'"  placement="right"><i class="lni lni-graph"></i><span>meeting</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="../user" class="sidebar-link" [ngbTooltip]="'User'"  placement="right"><img src="../../../assets/images/ps.png"><span>Teams</span>
+        </a>
+      </li>
+    
+</ul>
+    <div class="sidebar-footer mb-5">
+      <a routerLink="" class="sidebar-link">
+        <i class="lni lni-exit"></i>
+        <span>Logout</span>
+      </a>
+    </div> 
+
+  </aside>
+  
+

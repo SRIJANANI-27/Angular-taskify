@@ -1,0 +1,110 @@
+<div class="wrapper">
+    <div class="main p-3">
+        <nav class="navbar navbar-expand-lg bg-white rounded-4 sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Submission</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex me-5" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="bell">
+                                <img src="../assets/images/bellred.jpg" alt="" width="40px" class="me-4">
+                                <div class="conta">
+                                    <img src="../assets/images/chat1.png" alt="Avatar" width="40px">
+                                    <p><span style="color: blue; font-size: 15px;">Emmirates</span> added you in a
+                                        project ui/ux design</p>
+                                    <p><span
+                                            style="color: green; font-size: 15px; margin-left: 210px; position: relative; bottom: 20px;">2hrs
+                                            ago</span></p>
+
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item top">
+                            <img src="../assets/images/per6.avif" alt="" width="40px" height="40px"
+                                class="rounded-circle me-2">
+                            <div class="end">
+                              <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span>
+                                <h6>User</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row" style="overflow-y: scroll; height: 400px;">
+            <div class="col-lg-6 col-md-12">
+
+                <div class="container mt-4">
+                    <form [formGroup]="projectForm" (ngsubmit)="projectForm.status!== 'INVALID' && postEmployeeDetails()" class="bg-white p-4 rounded shadow">
+                  
+                      <div class="mb-3">
+                        <label for="title" class="form-label">Project Title:</label>
+                        <input type="text" id="title" class="form-control" formControlName="title" />
+                        <div *ngIf="projectForm.get('title')?.hasError('required') && projectForm.get('title')?.touched" class="text-danger">
+                          Project Title is required.
+                        </div>
+                      </div>
+                  
+                      <div class="mb-3">
+                        <label for="assignee" class="form-label">Assignee:</label>
+                        <input type="text" id="assignee" class="form-control" formControlName="assignee" />
+                        <div *ngIf="projectForm.get('assignee')?.hasError('required') && projectForm.get('assignee')?.touched" class="text-danger">
+                          Assignee is required.
+                        </div>
+                      </div>
+                  
+                      <div class="mb-3">
+                        <label for="description" class="form-label">Project Description:</label>
+                        <textarea id="description" class="form-control" formControlName="description"></textarea>
+                        <div *ngIf="projectForm.get('description')?.hasError('required') && projectForm.get('description')?.touched" class="text-danger">
+                          Project Description is required.
+                        </div>
+                      </div>
+                  
+                      <div class="mb-3">
+                        <label for="date" class="form-label">Date:</label>
+                        <input type="date" id="date" class="form-control" formControlName="date" />
+                        <div *ngIf="projectForm.get('date')?.hasError('required') && projectForm.get('date')?.touched" class="text-danger">
+                          Date is required.
+                        </div>
+                      </div>
+                  
+                      <div class="mb-3">
+                        <label for="file" class="form-label">Choose File:</label>
+                        <input type="file" id="file" class="form-control" [class.is-invalid]="projectForm.get('file')?.hasError('required') && projectForm.get('file')?.touched" (change)="onFileChange($event)" />
+                        <div *ngIf="projectForm.get('file')?.hasError('required') && projectForm.get('file')?.touched" class="invalid-feedback">
+                          File is required.
+                        </div>
+                      </div>
+                  
+                      <button type="submit" class="btn btn-primary " (click)="postEmployeeDetails()" [disabled]="projectForm.status ==='INVALID'" style="position: relative;left: 390px;">Submit</button>
+                    </form>
+                  </div>
+                  
+               
+            </div>
+
+
+            <div class="col-6 mt-5">
+                <app-progress></app-progress>
+            </div>
+
+
+
+            
+
+        </div>
+    </div>

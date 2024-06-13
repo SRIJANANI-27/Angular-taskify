@@ -1,0 +1,40 @@
+#table-1 tr,
+#table-1 td,
+#table-1 th {
+  padding: 12px;
+  font-size: 16px;
+  background-color: transparent;
+}
+.border {
+    border-radius: 8px;
+  
+  }
+  
+  .blue {
+    background-color: lightblue;
+    color: blue;
+  }
+  
+  .green {
+    background-color: lightgreen;
+    color: green;
+  }
+  
+  .red {
+    background-color: lightsalmon;
+    color: red;
+  }
+  option {
+    background-color: white;
+  }
+  .select {
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  .form-select {
+    width: 140px;
+  }
+  table{
+    text-transform: capitalize;
+  }

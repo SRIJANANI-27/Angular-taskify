@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="container mt-2">
+  
+      <div class="row ms-4">
+        <div class="col-md-8">
+          <div class="card border-info">
+            <h4 class="card-header bg-info text-white">To Do App</h4>
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter task" name="task" [(ngModel)]="addTaskValue">
+                <button class="btn btn-info" type="button" (click)="addTask()">Add Task</button>
+              </div>
+              <ul class="list-group">
+                <li *ngFor="let task of taskArr;index as i" class="list-group-item d-flex justify-content-between align-items-center">
+                  <div class="task-name">{{ task.task_name }}</div>
+                  <div class="btn-group">
+                    <button class="btn btn-sm  me-2" data-bs-toggle="modal" data-bs-target="#Modal" (click)="call(task)"><img src="../../../../assets/images/edit.png" alt="" width="30px"></button>
+                    <button class="btn btn-sm"  (click)="onDelete(i)"><img src="../../../../assets/images/delete.png" alt="" width="30px"></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-info text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Task</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Enter task" name="task" [(ngModel)]="editTaskValue">
+            <button class="btn btn-info" type="button" data-bs-dismiss="modal" (click)="editTask()">Update</button>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  
+  

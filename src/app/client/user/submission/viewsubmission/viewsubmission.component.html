@@ -1,0 +1,22 @@
+<div class="container mt-4 table-responsive">
+    <table class="table  table-striped ">
+      <thead>
+        <tr>
+          <th scope="col">Project Title</th>
+          <th scope="col">Assignee</th>
+          <th scope="col">Description</th>
+          <th scope="col">Date</th>
+          <th scope="col">File</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of listData ">
+          <td>{{ data.title }}</td>
+          <td>{{ data.assignee }}</td>
+          <td>{{ data.description }}</td>
+          <td>{{ data.date }}</td>
+          <td><img src="assets/images/pdf.png" alt="" width="30px"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

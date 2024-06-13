@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg bg-white rounded-4 sticky-top" id="nav1">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Schedule Meeting</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </ul>
+            <div class="img d-flex align-items-center">
+                <div class="bell">
+                    <img src="../assets/images/bellred.jpg" alt="" width="40px" class="me-4">
+                    <div class="conta">
+                        <img src="../assets/images/chat1.png" alt="Avatar" width="40px">
+                        <p><span style="color: blue; font-size: 15px;">Emmirates</span> added you in a
+                            project ui/ux design</p>
+                        <p><span
+                                style="color: green; font-size: 15px; margin-left: 210px; position: relative; bottom: 20px;">2hrs
+                                ago</span></p>
+
+                    </div>
+                </div>
+                <img src="../assets/images/per5.avif" alt="" width="40px" height="40px"
+                    class="rounded-circle ml-2 me-3">
+                <div class="ml-2">
+                    <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span><br>
+                    <span>Manager</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

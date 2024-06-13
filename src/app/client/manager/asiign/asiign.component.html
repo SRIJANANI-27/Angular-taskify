@@ -1,0 +1,234 @@
+<div class="container-fluid mt-3 table-responsive">
+    <table class="table table-bordered table-responsive" id="special-table">
+        <tr>
+            <td>
+                <input type="text" class="form-control" placeholder="Search..!" id="myInput" style="width: 30%"
+                    [(ngModel)]="searchTerm" />
+            </td>
+            <td class="float-end">
+                <button class="btn button_slide slide_right edit btn btn-xs align-items-center" data-bs-toggle="modal"
+                    data-bs-target="#exampleModalLong" (click)="clickAddEmployee()">
+                    <i class="fa-solid fa-plus fa-lg me-2" style="color: #875fdc"></i><a>Create-Task</a>
+                </button>
+            </td>
+        </tr>
+    </table>
+    <br />
+
+    <!-- Employee Table -->
+    <div class="table-responsive maintable">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Task</th>
+                    <th>Employee</th>
+                    <th>Priority</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Department</th>
+                    <th>Description</th>
+                    <th>File</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let submission of filteredemployeeData">
+                    <td>{{ submission.employeeId }}</td>
+                    <td>{{ submission.task }}</td>
+                    <td>{{ submission.employee }}</td>
+                    <td>{{ submission.priority }}</td>
+                    <td>{{ submission.employeeStartDate }}</td>
+                    <td>{{ submission.employeeEndDate }}</td>
+                    <td>{{ submission.department }}</td>
+                    <td>{{ submission.description }}</td>
+                    <td>
+                        <img src="../../../assets/images/pdf.png" alt="" width="30px" />
+                    </td>
+                    <td>
+                        <img src="../../../assets/images/edit.png" alt="" width="30px" class="me-3"
+                            data-bs-toggle="modal" data-bs-target="#exampleModalLong" (click)="onEdit(submission)" />
+                        <img src="../../../assets/images/delete.png" alt="" width="30px"
+                            (click)="deleteEmployee(submission)" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- FORM MODAL -->
+
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="addEmployeeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addEmployeeModalLabel">Create-Tasks</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form [formGroup]="employeeForm" novalidate
+                            (ngsubmit)="employeeForm.status !== 'INVALID' && postEmployeeDetails()">
+                            <div class="form-group mb-3">
+                                <label for="employeeId" class="mb-2">Employee ID:</label>
+                                <input type="text" class="form-control bg-transparent border-secondary" id="employeeId"
+                                    formControlName="employeeId" required />
+                                <div *ngIf="employeeForm.get('employeeId')?.touched && (employeeForm.get('employeeId')?.invalid || employeeForm.get('employeeId')?.errors?.['required'] || employeeForm.get('employeeId')?.errors?.['maxlength'] || employeeForm.get('employeeId')?.value?.length > 5)"
+                                    class="text-danger">
+                                    <div *ngIf="employeeForm.get('employeeId')?.errors?.['required']">
+                                        Employee ID is required.
+                                    </div>
+                                    <div *ngIf="employeeForm.get('employeeId')?.errors?.['maxlength']"
+                                        class="text-danger">
+                                        Employee ID must not exceed 5 characters.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="employeeId" class="mb-2">Task:</label>
+                                <input type="text" class="form-control bg-transparent border-secondary" id="task"
+                                    formControlName="task" required />
+                                <div *ngIf="
+                    employeeForm.get('task')?.touched &&
+                    employeeForm.get('task')?.invalid
+                  " class="text-danger">
+                                    task is required.
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="priority" class="mb-2">Employee:</label>
+                                <select class="form-select bg-transparent border-secondary" id="priority"
+                                    formControlName="employee" aria-label="Default select example">
+                                    <option [ngValue]="null" disabled selected>
+                                        Select employee
+                                    </option>
+
+                                    <option value="Ramya">Ramya</option>
+                                    <option value="Dinesh">Dinesh</option>
+                                    <option value="Srija">Srija</option>
+                                </select>
+                                <div *ngIf="
+                    employeeForm.get('employee')?.touched &&
+                    employeeForm.get('employee')?.invalid
+                  " class="text-danger">
+                                    employee is required.
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="priority" class="mb-2">Priority:</label>
+                                <select class="form-select bg-transparent border-secondary" id="priority"
+                                    formControlName="priority" aria-label="Default select example">
+                                    <option [ngValue]="null" disabled selected>
+                                        Select Priority
+                                    </option>
+                                    <option value="High">High</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                                <div *ngIf="
+                    employeeForm.get('priority')?.touched &&
+                    employeeForm.get('priority')?.invalid
+                  " class="text-danger">
+                                    Priority is required.
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="employeeStartDate" class="mb-2">Start Date:</label>
+                                <input type="date" class="form-control bg-transparent border-secondary"
+                                    id="employeeStartDate" formControlName="employeeStartDate" [ngClass]="{
+                    'is-invalid':
+                      employeeForm.get('employeeStartDate')?.touched &&
+                      employeeForm.get('employeeStartDate')?.invalid
+                  }" required />
+                                <div *ngIf="
+                    employeeForm.get('employeeStartDate')?.touched &&
+                    employeeForm.get('employeeStartDate')?.invalid
+                  " class="text-danger">
+                                    Start Date is required.
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="employeeEndDate" class="mb-2">End Date:</label>
+                                <input type="date" class="form-control bg-transparent border-secondary"
+                                    id="employeeEndDate" formControlName="employeeEndDate" [ngClass]="{
+                    'is-invalid':
+                      employeeForm.get('employeeEndDate')?.touched &&
+                      employeeForm.get('employeeEndDate')?.invalid
+                  }" required [min]="employeeForm.get('employeeStartDate')?.value" />
+                                <div *ngIf="
+                    employeeForm.get('employeeEndDate')?.touched &&
+                    employeeForm.get('employeeEndDate')?.invalid
+                  " class="text-danger">
+                                    End Date is required.
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="priority" class="mb-2">Department:</label>
+                                <select class="form-select bg-transparent border-secondary" id="department"
+                                    formControlName="department">
+                                    <option [ngValue]="null" disabled selected>
+                                        Select Department
+                                    </option>
+                                    <option value="IT">IT</option>
+                                    <option value="Frontend">Frontend</option>
+                                    <option value="Backend">Backend</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Angular">Angular</option>
+                                </select>
+                                <div *ngIf="
+                    employeeForm.get('department')?.touched &&
+                    employeeForm.get('department')?.invalid
+                  " class="text-danger">
+                                    department is required.
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="employeeStartDate" class="mb-2">Description:</label>
+                                <input type="text" class="form-control bg-transparent border-secondary" id="description"
+                                    formControlName="description" />
+                                <div *ngIf="
+                    employeeForm.get('description')?.touched &&
+                    employeeForm.get('description')?.invalid
+                  " class="text-danger">
+                                    Description is required.
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="fileInput" class="mb-2">Choose File:</label>
+                                <input type="file" id="fileInput" (change)="onFileChange($event)"
+                                    class="form-control bg-transparent border-secondary" formControlName="file" />
+
+                                <div *ngIf="
+                    employeeForm.get('file')?.touched &&
+                    employeeForm.get('file')?.invalid
+                  " class="text-danger">
+                                    File is required.
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="cancel" data-bs-dismiss="modal">
+                            close
+                        </button>
+                        <button type="submit" *ngIf="showAdd" class="btn btn-primary" (click)="postEmployeeDetails()"
+                            [disabled]="employeeForm.status === 'INVALID'">
+                            Add
+                        </button>
+                        <button type="submit" *ngIf="ShowUpdate" class="btn btn-success"
+                            (click)="updateEmployeeDetails()">
+                            update
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

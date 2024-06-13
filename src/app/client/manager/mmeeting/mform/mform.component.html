@@ -1,0 +1,88 @@
+<div class="container mt-5">
+    <div class="height">
+        <div class="row">
+
+            <div class="col-md-6">
+                <form [formGroup]="projectForm" (ngSubmit)="onSubmit()" class="border p-4">
+                    <h3>Schedule Meet</h3><br>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Meeting Title :</label>
+                        <input type="text" id="title" class="form-control" formControlName="title" required />
+                        <div *ngIf="projectForm.get('title')?.hasError('required') && projectForm.get('title')?.touched"
+                            class="text-danger">
+                            Meeting Title is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Date:</label>
+                        <input type="date" id="date" class="form-control" formControlName="date" required />
+                        <div *ngIf="projectForm.get('date')?.hasError('required') && projectForm.get('date')?.touched"
+                             class="text-danger">
+                          Date is required.
+                        </div>
+                        <div *ngIf="projectForm.get('date')?.hasError('pastDate') && projectForm.get('date')?.touched"
+                             class="text-danger">
+                          Date cannot be in the past.
+                        </div>
+                      </div>
+                      
+                      
+                    <div class="mb-3">
+                        <label for="time" class="form-label">Start Time:</label>
+                        <input type="time" id="time" class="form-control" formControlName="time" />
+                        <div *ngIf="projectForm.get('time')?.hasError('required') && projectForm.get('time')?.touched"
+                          class="text-danger">
+                          Start Time is required.
+                        </div>
+                      </div>
+                    
+                     <div class="mb-3">
+  <label for="labels">End Time</label>
+  <!-- Change type from datetime-local to time -->
+  <input type="time" class="form-control" id="labels" name="labels" formControlName="endtime">
+  <div class="text-danger" id="labelsError" *ngIf="projectForm.get('endtime')?.errors?.['required'] && projectForm.get('endtime')?.touched">
+    End time is required
+  </div>
+  <div class="text-danger" id="labelsError" *ngIf="projectForm.get('endtime')?.errors?.['pastTime'] && projectForm.get('endtime')?.touched">
+    End time should not be a past time
+  </div>
+</div>
+
+
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description :</label>
+                        <textarea id="description" class="form-control" formControlName="description"
+                            required></textarea>
+                        <div *ngIf="projectForm.get('description')?.hasError('required') && projectForm.get('description')?.touched"
+                            class="text-danger">
+                            Meeting Description is required.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" (click)="postEmployeeDetails()" [disabled]="projectForm.status ==='INVALID'">Schedule</button>
+
+
+
+
+
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="border p-4">
+                    <h3>Scheduled Meetings</h3>
+                    <div class="alert alert-danger" role="alert">
+                        Scheduled a meeting: Review on 2024-01-11 at 11:51. Description: Project Phase-II
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        Scheduled a meeting: Review on 2024-01-11 at 11:51. Description: Project Phase-II
+                    </div>
+                    <div id="alertMessage" class="alert alert-success" role="alert" *ngIf="alertMessage">
+                        {{alertMessage}}
+                    </div>
+                </div>
+                <br>
+                <img src="../assets/images/calen.png" alt="" width="400px" class="rounded img-fluid float-end me-5">
+            </div>
+        </div>
+    </div>
+</div>

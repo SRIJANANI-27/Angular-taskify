@@ -1,0 +1,80 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                  
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex align-items-center">
+                            <img src="../../../../assets/images/images (2).jpeg" alt="" width="50px" height="50px" class="rounded-circle mr-2">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Janani</h6>
+                                <img src="../../../../assets/images/stars.avif" alt="" width="60px">
+                               
+                            </div>
+                            </div>
+                            <p class="mt-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, eum!</p>
+                            
+                        </li>
+                       
+                        <li class="list-group-item">
+                            <div class="d-flex align-items-center">
+                            <img src="../../../../assets/images/images (1).jpeg" alt="" width="50px" height="50px" class="rounded-circle mr-2">
+                            <div class="ms-3">
+                                <h6 class="mb-0">John Doe</h6>
+                                <img src="../../../../assets/images/stars.avif" alt="" width="60px">
+                               
+                            </div>
+                            </div>
+                            <p class="mt-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, eum!</p>
+                            
+                        </li>
+                        <li class="list-group-item">
+                            <div class="d-flex align-items-center">
+                            <img src="../../../../assets/images/images.jpeg" alt="" width="50px" height="50px" class="rounded-circle mr-2">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Shesika</h6>
+                                <img src="../../../../assets/images/stars.avif" alt="" width="60px">
+                               
+                            </div>
+                            </div>
+                            <p class="mt-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, eum!</p>
+                            
+                        </li>
+                    </ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3>UI-UX Designer</h3><br>
+                <!-- Static comment -->
+                <div class="d-flex justify-content-start mb-3">
+                  <img src="../../../../assets/images/images.jpeg" alt="" width="50px" height="50px" class="rounded-circle mr-2">
+                  <div class="ms-3">
+                    <p class="mb-0" style="font-size: 16px;">This website is user-friendly and visually appealing 😍</p>
+                    <p class="text-secondary">Posted on {{ (postedOn | date:'dd-MMM') }} 2:00 PM</p>
+                  </div>
+                </div>
+                <!-- Dynamic comments -->
+                <div *ngFor="let comment of comments" class="d-flex justify-content-end mb-3">
+                  <div class="ms-3">
+                    <p class="mb-0">{{ comment }}</p>
+                    <p class="text-secondary">Posted on {{ (postedOn|date:'dd-MMM') }} {{ getCurrentTime() }}</p>
+                  </div>
+                  <img src="../../../../assets/images/images (1).jpeg" alt="" width="50px" height="50px" class="rounded-circle ms-3">
+                </div>
+                <textarea [(ngModel)]="newComment" cols="50" rows="3" class="rounded-3 border-secondary-subtle" placeholder="Add a comment"></textarea>
+                <button class="btn btn-sm btn-outline-secondary mt-3" (click)="addComment()">Send</button>
+              </div>
+            </div>
+          </div>
+          
+        
+        
+    </div>

@@ -1,0 +1,36 @@
+<!-- todo-list.component.html -->
+
+  <div class="row">
+    <div class=" col-8">
+        <input class=" py-3 form-control shadow" placeholder="input your task" type="text"
+        [(ngModel)]="inputText" id="inputText">
+    </div>
+    <div class="col-4">
+        <button (click)="addList()" class=" mt-2 btn btn-dark"> Add </button>
+    </div>
+</div>
+  <hr>
+  
+  <ul class="list-group">
+    <li *ngFor="let item of todoItems" class="my-3 py-3 shadow list-group-item" [class.text-decoration-line-through]="item.done">
+      <div class="row">
+        <div class="col-1">
+          <input type="checkbox" [(ngModel)]="item.done" (change)="done(item.id)">
+        </div>
+        <div class="col-6">
+          <span class="h4">{{ item.text }}</span>
+        </div>
+        <div class="col-5">
+            <div class="action-buttons">
+              <button class="btn btn-dark" (click)="deleteList(item.id)">
+                <img src="../assets/images/delete.png" alt="delete" width="20px" height="20px" />
+              </button>
+              <button class="btn btn-dark" (click)="editList(item.id)">
+                <img src="../assets/images/edit.png" alt="edit" width="20px" height="20px" />
+              </button>
+            </div>
+      </div>
+      </div>
+    </li>
+  </ul>
+  

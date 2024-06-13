@@ -1,0 +1,91 @@
+<div style="background: url('assets/images/bgimage.png') no-repeat center center fixed; background-size: cover;">
+    <section id="section1">
+        <div class="container">
+            <div class="img"></div>
+            <div class="login-container">
+                <div class="right">
+
+                    <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+                        <div class="mx-auto">
+                            <img id="user-image" class="d-flex"
+                                [src]="imageSources[loginForm.get('selectedUser')?.value] || 'assets/images/chat1.png'"
+                                alt="User Image">
+                            <select class="form-select rounded w-50 mx-auto" id="user-select"
+                                formControlName="selectedUser" required>
+                                <option value="" disabled>Select User</option>
+                                <option value="admin">Admin</option>
+                                <option value="employee">User</option>
+                                <option value="manager">Manager</option>
+                            </select>
+                            <small id="errorUtype" class="error">{{errorUtype}}</small>
+                        </div>
+
+                        <div class="input-div one">
+                            <div>
+                              <label for="username" class="form-label fs-5">Username:<span style="color: #ff3860;">*</span></label>
+                              <i class="fas fa-user"></i>
+                              <input class="form-control form-control-lg" type="text" placeholder="Username" formControlName="username">
+                              <small id="errorUsername" class="error"
+                                     *ngIf="loginForm.get('username')?.errors?.['required'] && (loginForm.get('username')?.dirty || loginForm.get('username')?.touched)">
+                                Username is required.
+                              </small>
+                              <small id="errorNoNumbersOrSpecialChars" class="error"
+                                     *ngIf="loginForm.get('username')?.errors?.['noNumbersOrSpecialChars'] && (loginForm.get('username')?.dirty || loginForm.get('username')?.touched)">
+                                Numbers and special characters are not allowed.
+                              </small>
+                            </div>
+                          </div>
+                          
+                          
+
+                        <div class="input-div two">
+                            <label for="password" class="form-label fs-5 mt-2">Password:<span
+                                    style="color: #ff3860;">*</span></label>
+                            <div class="i">
+                                <i class="fas fa-lock"></i>
+                                <span id="eyeIcon" class="eye-icon" (click)="togglePasswordVisibility()">
+                                    <i id="eyeIconInner" class="far fa-eye"
+                                        [ngClass]="{'fa-eye': hidePassword, 'fa-eye-slash': !hidePassword}"></i>
+                                </span>
+                            </div>
+
+                            <div>
+                                <input type="{{ hidePassword ? 'password' : 'text' }}" id="password"
+                                    class="form-control form-control-lg" placeholder="Password"
+                                    formControlName="password">
+                                <small id="errorpassword" class="error"
+                                    *ngIf="loginForm.get('password')?.hasError('required') && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                                    Password is required.
+                                </small>
+                                <small class="passerror" id="errorpasswordlength" class="error"
+                                    *ngIf="loginForm.get('password')?.hasError('pattern') && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                                    Password contains least 6 characters long,one uppercase,one special characters.
+                                </small>
+                            </div>
+                         </div>
+
+                        <div class="d-flex justify-content-around">
+                            <button class="button_slide slide_right edit btn btn-xs align-items-center" type="submit"
+                                id="liveToastBtn" [disabled]="loginForm.invalid">LOGIN</button>
+                        </div>
+                    </form>
+
+                    
+                    <div *ngIf="isToastShown" class="toast-container position-fixed top-0 end-0 p-3">
+                        <div id="liveToast" class="toast show bg-danger text-white" role="alert" aria-live="assertive"
+                            aria-atomic="true">
+                            <div class="toast-header bg-danger">
+                                <strong class="me-auto">Error</strong>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                                    aria-label="Close" (click)="isToastShown = false"></button>
+                            </div>
+                            <div class="toast-body">
+                                {{ errorMessage }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

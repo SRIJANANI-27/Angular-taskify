@@ -1,0 +1,179 @@
+.conta {
+    border: 2px solid #dedede;
+    background-color: #fffefe;
+    z-index: 4;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 0;
+    width: 300px;
+    position: relative;
+    top:30px;
+    right: 50px;
+    position: absolute;
+    display: none;
+    height: 70px;
+    font-size: 15px;
+    
+  }
+  .bell:hover .conta{
+    display: block;
+  }
+  .conta img {
+    float: left;
+    margin-right: 10px;
+  }
+  .top{
+    display: flex;
+  }
+  .single {
+    width: 100%;
+    max-width: 130px;
+    height: 130px;
+    background-color: white;
+    margin: 20px;
+    padding: 0px 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.259);
+  }
+
+  .single img {
+    width: 60px;
+    /* margin-left: 0px; */
+  }
+
+  .single p {
+    
+    margin-top: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 22px;
+    
+  }
+
+  .single:hover img {
+    padding: 2px;
+    transition: .1s;
+  }
+
+  .boxes {
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    left:50px
+    // right: -100px;
+  }
+  .float-right {
+    float: right;
+  }
+  
+.container-fluid::-webkit-scrollbar{
+  display: none;
+}
+.custom-card {
+  background-color: #ffffff; /* Set background color */
+  border-radius: 15px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+}
+
+.custom-card:hover {
+  transform: translateY(-5px); /* Move the card up slightly on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.user-type-header {
+  color: #333333; /* Set text color */
+  font-size: 1.5rem; /* Set font size */
+  font-weight: bold; /* Set font weight */
+  margin-bottom: 10px; /* Add some space below the header */
+}
+
+.user-type-header {
+  color: #333333; /* Set text color */
+  font-size: 1.5rem; /* Set font size */
+  font-weight: bold; /* Set font weight */
+  margin-bottom: 10px; /* Add some space below the header */
+}
+
+/* Add this CSS to your component's CSS file or global CSS file */
+.custom-card-body {
+  padding: 20px; /* Add padding */
+  background-color: #f8f9fa; /* Set background color */
+  border-radius: 0 0 15px 15px; /* Add rounded corners to the bottom */
+}
+
+.user-type-header {
+  color: #333333; /* Set text color */
+  font-size: 1.5rem; /* Set font size */
+  font-weight: bold; /* Set font weight */
+  margin-bottom: 10px; /* Add some space below the header */
+}
+
+.card-text {
+  color: #666666; /* Set text color */
+  font-size: 1.2rem; /* Set font size */
+}
+
+/* Add this CSS to your component's CSS file or global CSS file */
+.custom-card-body {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.custom-card-body:hover {
+  transform: translateY(-3px);
+}
+
+.user-type-header {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #666;
+  font-size: 1.2rem;
+}
+/* Add this CSS to your component's CSS file or global CSS file */
+.custom-card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-3px);
+}
+
+.custom-header {
+  background-color: #f8f9fa; /* Header background color */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.custom-body {
+  background-color: #ffffff; /* Body background color */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.user-type-header {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0; /* Remove default margin */
+}
+
+.card-text {
+  color: #666;
+  font-size: 1.2rem;
+}

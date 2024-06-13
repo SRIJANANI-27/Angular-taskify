@@ -1,0 +1,64 @@
+.members {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .profile-card {
+    margin: 0px auto;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    background: #fff;
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.7s;
+    position: relative;
+  }
+  
+  .profile-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 190px;
+    left: 0;
+    background: #DFCCFB;
+    color: black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 3px;
+    box-sizing: border-box;
+    transition: 0.4s;
+  }
+  
+  .back a {
+    color: white;
+    padding: 2px;
+    text-decoration: none;
+  }
+  
+  .back p {
+    padding: 1px;
+    font-size: 12px;
+  }
+  
+  .teammates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-left: -20px; /* Offset margin from col padding */
+  }
+  
+  .profile-card:hover .back {
+    top: 0px;
+    border-radius: 10px;
+  }
+  aside img{
+    width: 27px;
+    height: 27px;
+    
+    
+  }

@@ -1,0 +1,60 @@
+// .card-3d {
+//     perspective: 1000px;
+//     transform-style: preserve-3d;
+//     transition: transform 0.5s;
+    
+//   }
+//   .container{
+//     justify-content: space-between;
+//   }
+//   .card-inner {
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//     transform-style: preserve-3d;
+//     transition: transform 0.5s;
+//   }
+  
+//   .card:hover .card-inner {
+//     transform: rotateY(180deg);
+//     cursor: pointer;
+//   }
+  
+//   .card-front,
+//   .card-back {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     backface-visibility: hidden;
+//   }
+  
+//   .card-front {
+//     z-index: 2;
+//   }
+  
+//   .card-back {
+//     transform: rotateY(180deg);
+    
+
+//   }  
+// li{
+//     padding: 15px;
+// }
+// .card-img-top{
+//    height: 150px;
+// }
+.card-img-top{
+       height: 150px;
+    }
+    .custom {
+        margin-right: 80px;
+        margin-left: 10px;
+        position: relative;
+        left: 10px; /* Adjust the margin value as needed */
+      }   
+      .custom .card-3d:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      

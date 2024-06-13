@@ -1,0 +1,55 @@
+// /* todo-list.component.css */
+:host {
+    display: block;
+    margin: 5px; /* Add some margin for spacing */
+  }
+  
+  /* Styles for the input and button */
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* Styles for the todo list items */
+  .list-group-item {
+    transition: background-color 0.3s;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Styles for the buttons in the list items */
+  .action-buttons {
+    display: flex;
+  }
+  
+  /* Add some spacing between action buttons */
+  .action-buttons button:not(:last-child) {
+    margin-right: 5px;
+  }
+ button:hover {
+    background-color: white;
+    color: black;
+  }
+
+
+

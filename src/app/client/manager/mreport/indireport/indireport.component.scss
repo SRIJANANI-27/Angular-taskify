@@ -1,0 +1,27 @@
+// *{
+//     overflow: hidden;
+// }
+.red{
+    background-color: rgba(255, 0, 0, 0.548);
+    color: white;
+    border-radius: 6px;
+    padding: 3px;
+  }
+  p{
+    font-size: 16px;
+  }
+  .flex1 h5,.flex1 h6{
+    margin-left: 11px;
+}
+.flex1 h5{
+  font-weight: bold;
+}
+.transparent-table th,
+.transparent-table td {
+  background-color: rgba(255, 255, 255, 0.205); 
+  text-transform: capitalize;
+}
+.custom-modal-width {
+  max-width: 700px; /* Set your desired width */
+  width: 100%;
+}

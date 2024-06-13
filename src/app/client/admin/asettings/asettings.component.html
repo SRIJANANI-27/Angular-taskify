@@ -1,0 +1,279 @@
+<div class="wrapper">
+    <div class="main p-3">
+        <nav class="navbar navbar-expand-lg bg-white rounded-4" id="nav1">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Settings</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <form class="d-flex ml-5" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <div class="bell">
+                      <img src="../assets/images/bellred.jpg" alt="" width="40px" class="me-4">
+                      <div class="conta">
+                        <img src="../assets/images/chat1.png" alt="Avatar" width="40px">
+                        <p><span style="color: blue; font-size: 15px;">Emmirates</span> added you in a project ui/ux design
+                        </p>
+                        <p><span
+                            style="color: green; font-size: 15px; margin-left: 210px; position: relative; bottom: 20px;">2hrs
+                            ago</span></p>
+    
+                      </div>
+                    </div>
+    
+                  </li>
+                  <li class="nav-item top">
+                    <img src="../assets/images/per5.avif" alt="" width="40px" height="40px" class="rounded-circle me-3">
+                    <div class="end">
+                      <span *ngIf="loggedInUsername">{{ loggedInUsername }}</span>
+                      <h6>Admin</h6>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+<br>
+<br>
+          <!-- settings -->
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="frstnotify bg-white">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th><img src="../assests/check-mark.png" alt="" width="30px" style="margin-right: 30px;">Task
+                            Settings</th>
+                          <th>Toggle 1</th>
+                          <th>Toggle 2</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>notify me for tasks</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>task settings</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>managers</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>team members</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>individuals</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>assigned</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-md-3">
+                <div class="sendnotify bg-white">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th><img src="../assests/forum.png" alt="" width="30px" style="margin-right: 10px;">Forum
+                            Notifications</th>
+                          <th>Notify</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Notify for all forums and their comments</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="notifyAllForums" checked>
+                              <label class="form-check-label" for="notifyAllForums"></label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Notify on announcement forums</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="notifyAnnouncementForums">
+                              <label class="form-check-label" for="notifyAnnouncementForums"></label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Notify on announcement comments</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" id="notifyAnnouncementComments">
+                              <label class="form-check-label" for="notifyAnnouncementComments"></label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          
+                          <td><h6>Customize your Background</h6></td>  
+                           <td><button (click)="tap()" class="btn btn-outline-success btn-sm">click me</button></td>
+                         
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="table-responsive">
+                  <table class="table bg-white ltable" width="100%">
+                    <thead>
+                      <tr>
+                        <th><img src="../assests/mail.png" alt="" width="30px" style="margin-right: 10px;">Mail Notifications
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>notify me for tasks</td>
+                        <td>assigned me</td>
+                        <td>Created</td>
+                      </tr>
+                      <tr>
+                        <td>frequency</td>
+                        <td>
+                          <select id="frequency" class="form-control">
+                            <option>frequency</option>
+                            <option>weekly</option>
+                            <option>daily</option>
+                          </select>
+                        </td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="notifyAnnouncementComments">
+                            <label class="form-check-label" for="notifyAnnouncementComments"></label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>assigned</td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="notifyAnnouncementComments">
+                            <label class="form-check-label" for="notifyAnnouncementComments"></label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="notifyAnnouncementComments">
+                            <label class="form-check-label" for="notifyAnnouncementComments"></label>
+                          </div>
+                        </td>
+                      </tr>
+                      
+                    
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+
